@@ -1,0 +1,202 @@
+@import './normalize.css';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('../assets/background.png') center/cover repeat;
+}
+
+.header {
+  padding-top: 30px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: burlywood;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 30px;
+}
+
+.ancient-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+
+  margin-bottom: 10px;
+}
+
+.ancient {
+  position: relative;
+  height: 259px;
+}
+
+.ancient-selected {
+  outline: solid blueviolet;
+  border-radius: 5px;
+}
+
+.ancient-img {
+  width: 200px;
+  height: 259px;
+  border-radius: 5px;
+}
+
+.ancient-game-complexity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.ancient:hover>.ancient-game-complexity {
+  z-index: 10;
+  opacity: 1;
+}
+
+.game-complexity-item {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+
+  border-radius: 5px;
+  list-style: none;
+  cursor: pointer;
+  background-color: rgba(189, 171, 171, 0.5);
+
+  transition: all .3s;
+}
+
+.game-complexity-item:hover {
+  background-color: blueviolet;
+}
+
+.game-complexity-text {
+  margin-bottom: 20px;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: blueviolet;
+}
+
+.deck-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+.deck-stages {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+
+.stage-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.stage-title {
+  width: 100px;
+  text-align: right;
+}
+
+.square-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.green {
+  background-color: darkgreen;
+}
+
+.brown {
+  background-color: goldenrod;
+}
+
+.blue {
+  background-color: royalblue;
+}
+
+.card-back {
+  height: 200px;
+  width: 136px;
+  background: url('../assets/mythicCardBack.png') center/cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-face {
+  height: 200px;
+  width: 136px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-back:hover,
+.card-face:hover {
+  outline: solid blueviolet;
+}
+
+.card-none {
+  background: none;
+  cursor: auto;
+}
+
+.card-none:hover {
+  outline: none;
+}
